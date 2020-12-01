@@ -10,14 +10,15 @@ const NavLink = ({ children, fontWeight, to }) => (
     font-weight: ${fontWeight || "normal"};
     line-height: 1;
     padding: 0.25rem 0;
+    margin-left: 0.5rem;
     text-decoration: none;
     
     &.current-page {
       border-bottom: 2px solid #222;
     }
 
-    &:last-child {
-      margin-left: 0.5rem;
+    &:first-of-type {
+      margin-left: 0;
     }
   `}>{children}</Link>
 );
@@ -40,6 +41,7 @@ const Header = () => (
       <nav css={css`margin: 0;`}>
         <NavLink to="/" activeClassName="current-page">Home</NavLink>
         <NavLink to="/about/" activeClassName="current-page">About</NavLink>
+        <NavLink to="/contact/" activeClassName="current-page">Contact</NavLink>
       </nav>
     </div>
   </header>
