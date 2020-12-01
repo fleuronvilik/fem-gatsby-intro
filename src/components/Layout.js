@@ -1,6 +1,8 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 
+import Header from './Header'
+
 const Layout = ({ children }) => (
   <>
     <Global
@@ -50,7 +52,7 @@ const Layout = ({ children }) => (
         }
       `}
     />
-    <header></header>
+    <Header />
     <main css={css`
       margin: 2rem auto 4rem;
       max-width: 90vw;
