@@ -9,6 +9,16 @@ export const usePosts = () => {
             title
             slug
             author
+            image {
+              sharp: childImageSharp {
+                fluid(
+                  maxWidth: 100
+                  maxHeight: 100
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
           excerpt
         }
@@ -20,6 +30,7 @@ export const usePosts = () => {
     title: post.frontmatter.title,
     slug: post.frontmatter.slug,
     author: post.frontmatter.author,
-    excerpt: post.excerpt
+    excerpt: post.excerpt,
+    image: post.frontmatter.image.sharp.fluid
   }))
 };
