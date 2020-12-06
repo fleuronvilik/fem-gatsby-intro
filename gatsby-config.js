@@ -32,6 +32,12 @@ module.exports = {
         name: 'images',
         path: 'images'
       }
+    },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: '6820502016'
+      }
     }
   ],
 }
